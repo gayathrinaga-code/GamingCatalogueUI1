@@ -1,0 +1,25 @@
+.search-bar {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    width: 200px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px white;
+  }
+  
+  .error-message {
+    color: red;
+    margin: 20px;
+    text-align: center;
+  }
+  

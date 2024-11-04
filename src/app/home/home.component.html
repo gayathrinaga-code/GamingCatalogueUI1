@@ -1,0 +1,27 @@
+<div class="container">
+  <mat-toolbar  color="accent">
+    <span>Dashboard</span>
+  </mat-toolbar>
+  <div class="search-bar">
+    <mat-form-field appearance="outline">
+      <mat-label>Search Games </mat-label>
+      <input matInput [(ngModel)]="searchText" placeholder="Search..." />
+    </mat-form-field>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div class="product-list">
+    <mat-card *ngFor="let game of filteredGames()" class="product-card">
+      <mat-card-header>
+        <mat-card-title>{{ game.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ game.description }}</p>
+        <span class="price">{{ game.game_Price | currency }}</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+  

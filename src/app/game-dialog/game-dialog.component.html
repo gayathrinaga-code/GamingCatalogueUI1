@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>{{action}} Game Details</h1>
+<div>
+  <div mat-dialog-content>
+    <form [formGroup]="productForm" class="product-form">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>title</mat-label>
+        <input matInput formControlName="title" placeholder="Title">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Platform</mat-label>
+        <input matInput formControlName="platform" placeholder="Platform">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" placeholder="Description"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="game_Price"  placeholder="game_Price" type="number">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>DevelopedBy</mat-label>
+        <input matInput formControlName="developedBy"  placeholder="DevelopedBy">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>AgeLevel</mat-label>
+        <input matInput formControlName="ageLevel"  placeholder="AgeLevel" type="number">
+      </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions align="end">
+    <button mat-button (click)="doAction()">{{action}}</button>
+    <button mat-button (click)="closeDialog()">Cancel</button>
+  </div>
+</div>
+
